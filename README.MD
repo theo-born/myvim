@@ -38,9 +38,8 @@ Status bar is dynamically changing colors based on the current vim mode -> possi
 
 ### Custom keybiddings (keybiddings.json) for vim that are not in \_vimrc:
 
-<!-- switching splits (panels or whatever): CTRL+h CTRL+j CTRL+k CTRL+l
-Send tab to split CTRL+CMD/ALT+h CTRL+CMD/ALT+j CTRL+CMD/ALT+k CTRL+CMD/ALT+l
-SHIT IS CURRENTLY WIP -->
+Switching splits (panels or whatever): **CTRL+h CTRL+j CTRL+k CTRL+l** \
+Send tab to split **CTRL+SHIFT+h CTRL+SHIFT+j CTRL+SHIFT+k CTRL+SHIFT+l**
 
 Switch between left/right tabs: **CMD+h CMD+L** \
 Default **CTRL+1234567890** tabs are now also **CMD/WIN+123456789** \
@@ -53,7 +52,8 @@ Move line up or down (thru VSCode shortcut, cursor stays where it was): **Alt+j 
 Indent a line: **Shift+>** \
 Deindent a line: **Shift+<**
 
-Single symbol snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press
+Single symbol snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press \
+Search to (non-inclusive compared to f): **t** (or **T**)
 
 ---
 
@@ -91,11 +91,9 @@ Go to beginning of a line: **0** \
 Swap between parenteses(they should be highlighted): **%**
 
 Jump to definition: **gd** \
-Jump to file under cursor: **gf**
+Open file on which filename the cursor is: **gf**
 
 Commenting: **gc** something, **gcap** - commmenting out a paragraph
-
-Open file on which filename the cursor is: **gf**
 
 Reopen the last insertion done: **gi**
 
@@ -148,6 +146,7 @@ Clear recording (register): **q + letter + q (qaq)**
 
 ### Commands (google it lol)
 
+Escape character in a command: **\\** \
 Last used : command: **@:** \
 Repeat the : command used above: **@@**
 
@@ -168,7 +167,9 @@ Select basic: **v** \
 Select lines: **V**
 
 Put a cursor on the word: **gb** \
-Reopen last Visual select: **gv**
+Reopen last Visual select: **gv** \
+Select to the end of the line: **g$** \
+Select to the end of the line (doesn't go to the next line): **g\_**
 
 Visual mode allows for different commands than normal mode, **i** & **a** won't work use **I** & **A**
 
