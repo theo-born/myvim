@@ -9,7 +9,7 @@ Terminal opens in current file folder by default
 
 ---
 
-### VSCode default shortcuts (kinda useful)
+## VSCode default shortcuts (kinda useful)
 
 VSC Command palette: **CMD/Ctrl + Shift + P** \
 VSC Open file: **CMD/Ctrl + P** \
@@ -45,8 +45,6 @@ Switch between left/right tabs: **CMD+h CMD+L** \
 Default **CTRL+1234567890** tabs are now also **CMD/WIN+123456789** \
 Move tabs left or right (by one): **CTRL+CMD+h CTRL+CMD+l**
 
-_Split movements are WIP_
-
 Move line up or down (thru VSCode shortcut, cursor stays where it was): **Alt+j Alt+k**
 
 Indent a line: **Shift+>** \
@@ -81,8 +79,16 @@ Redo: **Ctrl+R**
 Paste (infront): **p** \
 Paste (after): **P**
 
+Copy something: **y** \
 Copy whole line: **yy** \
 Copy only line after cursor: **Y**
+
+Delete something: **d** \
+Delete whole line: **dd** \
+Delete only line after cursor: **D**
+
+Cut: **x**
+Cut before cursor: **X**
 
 Change case: **~**
 
@@ -236,6 +242,17 @@ Delete all marks: **:delm!**
 <!-- Lowercase marks are single file, Uppercase are multifile -->
 
 ---
+
+### Commands:
+
+Write (save file): **:w** \
+Write all tabs: **:wa** \
+Close: **:q** \
+Close (force): **:q!** \
+Close all tabs: **:qa** \
+Close all tabs (force): **:qa!** \
+Write & Close: **:wq** \
+Write & Close all tabs: **:wqa** \
 
 ### The Rest:
 
