@@ -1,9 +1,9 @@
-# This is readme for my VS Code & Vim preset
+# This is readme for my VS Code & VIM preset
 
 ## Custom settings
 
 2077 theme with custom surrounds colors \
-VSCodeVim
+VSCodeVIM
 
 Terminal opens in current file folder by default
 
@@ -16,7 +16,6 @@ VSC Open file: **CMD/Ctrl + P** \
 Open VSC terminal: **Ctrl + `** \
 Search: **CMD/Ctrl + F** \
 Search all files and folders: **CMD/Ctrl + Shift + F** \
-Toggle sidebar visibility: **CMD+b** \
 File Explorer: **CMD/Ctrl + Shift + E (gotta verify Windows)** \
 Settings: **CMD/Ctrl + < (gotta verify Windows)**
 
@@ -24,7 +23,7 @@ Settings: **CMD/Ctrl + < (gotta verify Windows)**
 
 &nbsp;
 
-## Vim cheatsheet
+## VIM cheatsheet
 
 &nbsp;
 
@@ -36,10 +35,14 @@ Status bar is dynamically changing colors based on the current vim mode -> possi
 
 &nbsp;
 
-### Custom keybiddings (keybiddings.json) for vim that are not in \_vimrc:
+### Keybiddings (keybiddings.json) incl. for vim that are not in \_vimrc:
 
 Switching splits (panels or whatever): **CTRL+h CTRL+j CTRL+k CTRL+l** \
-Send tab to split **CTRL+SHIFT+h CTRL+SHIFT+j CTRL+SHIFT+k CTRL+SHIFT+l**
+Send tab to split **CTRL+SHIFT+h CTRL+SHIFT+j CTRL+SHIFT+k CTRL+SHIFT+l** \
+Toggle sidebar visibility: **CMD+b** \
+Control left menu using either arrows or: **hjkl** \
+Open item: **ENTER**
+Default "rename item" is instead of **ENTER**: **SHIFT+ENTER**
 
 Switch between left/right tabs: **CMD+h CMD+L** \
 Default **CTRL+1234567890** tabs are now also **CMD/WIN+123456789** \
@@ -49,9 +52,6 @@ Move line up or down (thru VSCode shortcut, cursor stays where it was): **Alt+j 
 
 Indent a line: **Shift+>** \
 Deindent a line: **Shift+<**
-
-Single symbol snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press \
-Search to (non-inclusive compared to f): **t** (or **T**)
 
 ---
 
@@ -79,7 +79,7 @@ Redo: **Ctrl+R**
 Paste (infront): **p** \
 Paste (after): **P**
 
-Copy something: **y** \
+Copy (yank) something: **y** \
 Copy whole line: **yy** \
 Copy only line after cursor: **Y**
 
@@ -87,13 +87,31 @@ Delete something: **d** \
 Delete whole line: **dd** \
 Delete only line after cursor: **D**
 
-Cut: **x**
+Change (selected), it copies changed to the register: **c** \
+Change until the end of the line: **C** \
+Change whole line: **cc** or **S** (tbh I should reuse S for something better)
+
+**_Search_** \
+Cut (you can cut one symbol under the cursor): **x** \
 Cut before cursor: **X**
+
+Single symbol snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press **;** \
+(I prefer easymotion to snake tbh)
+
+Search to (non-inclusive compared to f): **t** (or **T**)
+
+Search for selected term (go to the next one immediately as well): **\*** \
+Search for selected term backwards (go to the next one immediately as well): **?\*** \
+Jump to next search term occurence: **n** \
+Jump to previous search term occurence: **N**
+
+Combine search with delete, yank, paste, like **d/asd** which deletes till _asd_ occurence
 
 Change case: **~**
 
 Go to end of line: **$** \
 Go to beginning of a line: **0** \
+Go to the first non-blank symbol of a line: **^** \
 Swap between parenteses(they should be highlighted): **%**
 
 Jump to definition: **gd** \
@@ -107,18 +125,9 @@ Upper/Lowercase using motion: **gU <motion> gu <motion> gUap** (puts a whole par
 
 ---
 
-### Search
-
-Search for selected term (go to the next one immediately as well): **\*** \
-Search for selected term backwards (go to the next one immediately as well): **?\*** \
-Jump to next search term occurence: **n** \
-Jump to previous search term occurence: **N**
-
----
-
 ### VIM Surround
 
-Vim surround in visual mode: **S** \
+VIM surround in visual mode: **S** \
 Use ( for spaces before/after the selection or ) if you don't want them spaces \
 Add desired surround around text defined by <motion>: **ys** <motion> <desired> (eg **ys$)** ) \
 Delete existing surround: **ds** <existing surround> \
@@ -141,9 +150,9 @@ Numbered registers (first yank 0, after second it moves to 1 and so on): **"0** 
 
 ---
 
-### Vim Recording (Macros)
+### VIM Recording (Macros)
 
-Vim recording (also uses the same registers as yank and such, might rewrite it): **q** + letter (qa) \
+VIM recording (also uses the same registers as yank and such, might rewrite it): **q** + letter (qa) \
 Play vim recording: **@ + same letter (@a)** \
 Append recording: **q + LETTER (qA)** \
 Clear recording (register): **q + letter + q (qaq)**
@@ -151,6 +160,15 @@ Clear recording (register): **q + letter + q (qaq)**
 ---
 
 ### Commands (google it lol)
+
+Write (save file): **:w** \
+Write all tabs: **:wa** \
+Close: **:q** \
+Close (force): **:q!** \
+Close all tabs: **:qa** \
+Close all tabs (force): **:qa!** \
+Write & Close: **:wq** \
+Write & Close all tabs: **:wqa** \
 
 Escape character in a command: **\\** \
 Last used : command: **@:** \
@@ -198,7 +216,7 @@ _List of **Visual selection** motions or however tf they're called:_
 
 **aw** a word (with white space) \
 **iw** inner word \
-**aW** a WORD (with white space) \
+**aW** a WORD (with white space), all symbols to space/line break \
 **iW** inner WORD \
 **as** a sentence (with white space) \
 **is** inner sentence \
@@ -214,8 +232,10 @@ _List of **Visual selection** motions or however tf they're called:_
 **i<** inner <> block \
 **a[** a [] block (with []), \
 **i[** inner [] block \
+**it** between current matching HTML tags \
+**at** including current matching HTML tags
 
-To go to Visual block select mode: **Leader+v'** \
+To go to Visual block select mode: **Leader+v** \
 Motion commands to create more cursors (and then move them): **Leader+v jjjjj $** (to move to the end of the line with them)
 
 ---
@@ -228,6 +248,8 @@ Next occurence: **n** \
 Previous occurence: **n** \
 To go to the next occurence and then delete it and do it for the next one as well and so on: **ndw n . n .** \
 Select the next occurence of your last search (thru **/** or **?**): **gn** (or **gn**)
+
+Don't hesi
 
 ---
 
@@ -242,17 +264,6 @@ Delete all marks: **:delm!**
 <!-- Lowercase marks are single file, Uppercase are multifile -->
 
 ---
-
-### Commands:
-
-Write (save file): **:w** \
-Write all tabs: **:wa** \
-Close: **:q** \
-Close (force): **:q!** \
-Close all tabs: **:qa** \
-Close all tabs (force): **:qa!** \
-Write & Close: **:wq** \
-Write & Close all tabs: **:wqa** \
 
 ### The Rest:
 
