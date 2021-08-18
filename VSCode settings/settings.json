@@ -4,7 +4,7 @@
         ],
         "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
         "files.autoSave": "off",
-        "workbench.colorTheme": "2077",
+        "workbench.colorTheme": "Quiet Light",
         "workbench.startupEditor": "newUntitledFile",
         "peacock.favoriteColors": [
             {

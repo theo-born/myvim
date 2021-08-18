@@ -2,6 +2,15 @@
 [
 	
 	    {
+		"key": "ctrl+cmd+\\",
+		"command": "editor.emmet.action.matchTag"
+	    },
+	// WIN
+	//     {
+	// 	"key": "ctrl+alt+\\",
+	// 	"command": "editor.emmet.action.matchTag"
+	//     },
+	    {
 		"key": "ctrl+j",
 		"command": "workbench.action.navigateDown"
 	    },
@@ -77,42 +86,43 @@
 		"key": "cmd+9",
 		"command": "workbench.action.openEditorAtIndex9"
 	    },
-	    {
-		"key": "win+1",
-		"command": "workbench.action.openEditorAtIndex1"
-	    },
-	    {
-		"key": "win+2",
-		"command": "workbench.action.openEditorAtIndex2"
-	    },
-	    {
-		"key": "win+3",
-		"command": "workbench.action.openEditorAtIndex3"
-	    },
-	    {
-		"key": "win+4",
-		"command": "workbench.action.openEditorAtIndex4"
-	    },
-	    {
-		"key": "win+5",
-		"command": "workbench.action.openEditorAtIndex5"
-	    },
-	    {
-		"key": "win+6",
-		"command": "workbench.action.openEditorAtIndex6"
-	    },
-	    {
-		"key": "win+7",
-		"command": "workbench.action.openEditorAtIndex8"
-	    },
-	    {
-		"key": "win+8",
-		"command": "workbench.action.openEditorAtIndex9"
-	    },
-	    {
-		"key": "win+9",
-		"command": "workbench.action.openEditorAtIndex1"
-	    },
+	// WIN
+	//     {
+	// 	"key": "win+1",
+	// 	"command": "workbench.action.openEditorAtIndex1"
+	//     },
+	//     {
+	// 	"key": "win+2",
+	// 	"command": "workbench.action.openEditorAtIndex2"
+	//     },
+	//     {
+	// 	"key": "win+3",
+	// 	"command": "workbench.action.openEditorAtIndex3"
+	//     },
+	//     {
+	// 	"key": "win+4",
+	// 	"command": "workbench.action.openEditorAtIndex4"
+	//     },
+	//     {
+	// 	"key": "win+5",
+	// 	"command": "workbench.action.openEditorAtIndex5"
+	//     },
+	//     {
+	// 	"key": "win+6",
+	// 	"command": "workbench.action.openEditorAtIndex6"
+	//     },
+	//     {
+	// 	"key": "win+7",
+	// 	"command": "workbench.action.openEditorAtIndex8"
+	//     },
+	//     {
+	// 	"key": "win+8",
+	// 	"command": "workbench.action.openEditorAtIndex9"
+	//     },
+	//     {
+	// 	"key": "win+9",
+	// 	"command": "workbench.action.openEditorAtIndex1"
+	//     },
 	    {
 		"key": "ctrl+cmd+h",
 		"command": "moveActiveEditor",
@@ -131,24 +141,25 @@
 		    "value": 1
 		}
 	    },
-	    {
-		"key": "ctrl+win+h",
-		"command": "moveActiveEditor",
-		"args": {
-		    "to": "left",
-		    "by": "tab",
-		    "value": 1
-		}
-	    },
-	    {
-		"key": "ctrl+win+l",
-		"command": "moveActiveEditor",
-		"args": {
-		    "to": "right",
-		    "by": "tab",
-		    "value": 1
-		}
-	    },
+	// WIN
+	//     {
+	// 	"key": "ctrl+win+h",
+	// 	"command": "moveActiveEditor",
+	// 	"args": {
+	// 	    "to": "left",
+	// 	    "by": "tab",
+	// 	    "value": 1
+	// 	}
+	//     },
+	//     {
+	// 	"key": "ctrl+win+l",
+	// 	"command": "moveActiveEditor",
+	// 	"args": {
+	// 	    "to": "right",
+	// 	    "by": "tab",
+	// 	    "value": 1
+	// 	}
+	//     },
 	    {
 		"key": "alt+j",
 		"command": "editor.action.moveLinesDownAction",
@@ -181,7 +192,7 @@
 	// 	"when": "inquickopen"
 	//     },  
 	    {
-		"key": "cmd+enter",
+		"key": "shift+enter",
 		"command": "renameFile",
 		"when": "explorerViewletVisible && filesExplorerFocus"
 	    },

@@ -1,13 +1,13 @@
 "Velkom!
-"Check this resource firsthttp://vimdoc.sourceforge.net/htmldoc/map.html
+"Check this resource first http://vimdoc.sourceforge.net/htmldoc/map.html
 
-nmap <space>rn <Plug>(coc-rename) 
 
-" Shift j (or k) jumps 5 lines down (or up)
+
+" Shift j (or k) jumps 5 lines down (or up), not in insert mode ofc
 map J 5j
 map K 5k
 
-" s works goes to easymotion search by letter
+" s works goes to easymotion search by letter (this the one I really like)
 nnoremap s <Leader><Leader>s
 
 " easymotion for most used shortcuts (I often press spacebar too fast for mac to register it properly) 
@@ -19,38 +19,50 @@ nnoremap <Leader>j <Leader><Leader>j
 nnoremap <Leader>k <Leader><Leader>k
 
 
+" Select the current word for search (highlighted word), usual * goes right to the next item
+nmap <Leader>* *N
 
 
 " Y works like D (but with yanking, instead of deleting), u can still use yy to yank the whole line 
 nnoremap Y y$
 
-" Leader with v puts VIM from normal to the visual block mode (<C-v>)
+" <Leader> with V selects the rest of the line
+nnoremap <Leader>V v$h
+
+" <Leader> with v puts VIM from normal to the visual block mode (<C-v>)
 nnoremap <Leader>v <C-v>
 
-" Leader with i adds one character (u type it) then exit back to the normal mode
-nnoremap <Leader>i i_<Esc>r
 
-" Leader with o/O puts an empty line above or below your current line (without going to the insert mode)
+" <Leader> with o/O puts an empty line above or below your current line (without going to the insert mode)
 nmap <Leader>o $a<ENTER><Esc>
 nmap <Leader>O $I<ENTER><Esc>
 
-" Leader Leader with o puts an empty line after the cursor 
+" <Leader> <Leader> with o puts an empty line after the cursor 
 nmap <Leader><Leader>o i<ENTER><Esc>
 
-" Leader with a puts a space before/after your current cursor 
+" <Leader> with a puts a space before/after your current cursor 
 nmap <Leader>a a<SPACE><Esc> 
 nmap <Leader>A i<SPACE><Esc>
 
-" Leader with ; puts ; on the end of the current line (without going to the insert mode)
+" <Leader> with ; puts ; on the end of the current line (without going to the insert mode)
 nnoremap <Leader>; $a;<Esc>
 
-" Leader with , puts , on the end of the current line (without going to the insert mode)
+" <Leader> with , puts , on the end of the current line (without going to the insert mode)
 nnoremap <Leader>, $a,<Esc>
 
 
-" Insert mode
+" <Leader> with c copies current selection (or line of nothing is selected currently) to both yank registry and to system clipboard
+" might delete later
+nnoremap <Leader>c "*y<ENTER>
 
-" Delete current line
-"inoremap <C-d> <C-o>dd
+" Insert mode: Delete current line
+" might deprecate this later
+inoremap <C-d> <C-o>dd
 
-map <Leader>c "*y
+
+" tf is this even?
+"nmap <space>rn <Plug>(coc-rename) 
+
+
+" <Leader> with i adds one character (u type it) then exit back to the normal mode, trashass hack
+"nnoremap <Leader>i i_<Esc>r

@@ -41,7 +41,7 @@ Switching splits (panels or whatever): **CTRL+h CTRL+j CTRL+k CTRL+l** \
 Send tab to split **CTRL+SHIFT+h CTRL+SHIFT+j CTRL+SHIFT+k CTRL+SHIFT+l** \
 Toggle sidebar visibility: **CMD+b** \
 Control left menu using either arrows or: **hjkl** \
-Open item: **ENTER**
+Open item: **ENTER** \
 Default "rename item" is instead of **ENTER**: **SHIFT+ENTER**
 
 Switch between left/right tabs: **CMD+h CMD+L** \
@@ -67,7 +67,8 @@ Go back to the previous action cursor position: **CTRL+I**
 
 Insert infront of cursor: **i** \
 Insert beginning of the line: **I** \
-To go back to the last insert: **gi**
+To go back to the last insert: **gi** \
+Insert mode: Delete current line (\_vimrc): **CTRL+d**
 
 Append after cursor: **a** \
 Append end of the line: **A**
@@ -81,7 +82,8 @@ Paste (after): **P**
 
 Copy (yank) something: **y** \
 Copy whole line: **yy** \
-Copy only line after cursor: **Y**
+Copy only line after cursor (\_vimrc): **Y** \
+Copy current selection (or line of nothing is selected currently) to both yank registry and to system clipboard (\_vimrc): **Leader+c**
 
 Delete something: **d** \
 Delete whole line: **dd** \
@@ -91,21 +93,41 @@ Change (selected), it copies changed to the register: **c** \
 Change until the end of the line: **C** \
 Change whole line: **cc** or **S** (tbh I should reuse S for something better)
 
-**_Search_** \
 Cut (you can cut one symbol under the cursor): **x** \
 Cut before cursor: **X**
 
+Put an empty line below or above your current line (without going to the insert mode) (\_vimrc): **Leader+o** or **Leader+O** \
+Put an empty line after the cursor (without going to the insert mode) (\_vimrc): **Leader+Leader+o** \
+Put a space before/after your current cursor (without going to the insert mode) (\_vimrc): **Leader+A** or **Leader+a**
+
+Put ; on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+;** \
+Put , on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+,**
+
+**_Search_** \
 Single symbol snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press **;** \
 (I prefer easymotion to snake tbh)
 
 Search to (non-inclusive compared to f): **t** (or **T**)
 
 Search for selected term (go to the next one immediately as well): **\*** \
+Search for selected term (WITHOUT going to the next one immediately): **Leader+\*** \
 Search for selected term backwards (go to the next one immediately as well): **?\*** \
 Jump to next search term occurence: **n** \
 Jump to previous search term occurence: **N**
 
 Combine search with delete, yank, paste, like **d/asd** which deletes till _asd_ occurence
+
+**_Easymotion_** \
+Jump to pressed symbol (\_vimrc): **s** (**sz** shows all occurences of z or Z and you press key where you want to go) \
+**easymotion** for most used shortcuts (I often press spacebar too fast for mac to register it properly): \
+Ez motion by word (\_vimrc): **Leader+w** \
+Ez motion by word (backwards) (\_vimrc): **Leader+b** \
+Ez motion by word ends (\_vimrc): **Leader+e** \
+Ez motion by word ends (backwards) (\_vimrc): **Leader+ge** \
+Ez motion by lines down (\_vimrc): **Leader+j** \
+Ez motion by lines up (\_vimrc): **Leader+k**
+
+---
 
 Change case: **~**
 
@@ -188,7 +210,8 @@ Repeat the last substitute: **&**
 ### Multi cursor & Visual Selection
 
 Select basic: **v** \
-Select lines: **V**
+Select lines: **V** \
+Select til the end of the line (\_vimrc): **Leader+V**
 
 Put a cursor on the word: **gb** \
 Reopen last Visual select: **gv** \
@@ -211,7 +234,7 @@ Visual select multiple things: **v** something **vip** (visually select whole pa
 When selecting, inside: **vip** (visually select inside paragraph)
 When selecting, around: **vap** (visually select around paragraph)
 
-_List of **Visual selection** motions or however tf they're called:_
+_List of **Visual selection** motions or whatever tf they're called:_
 (works for any type of surroundings)
 
 **aw** a word (with white space) \
@@ -235,7 +258,7 @@ _List of **Visual selection** motions or however tf they're called:_
 **it** between current matching HTML tags \
 **at** including current matching HTML tags
 
-To go to Visual block select mode: **Leader+v** \
+To go to Visual block select mode (\_vimrc): **Leader+v** \
 Motion commands to create more cursors (and then move them): **Leader+v jjjjj $** (to move to the end of the line with them)
 
 ---
@@ -249,7 +272,7 @@ Previous occurence: **n** \
 To go to the next occurence and then delete it and do it for the next one as well and so on: **ndw n . n .** \
 Select the next occurence of your last search (thru **/** or **?**): **gn** (or **gn**)
 
-Don't hesi
+Don't hesi to combine it with something else, its just a motion i ssupose
 
 ---
 
