@@ -196,14 +196,16 @@ Escape character in a command: **\\** \
 Last used : command: **@:** \
 Repeat the : command used above: **@@**
 
-### Substitute (which is a command)
+### Substitute in line (which is a command)
 
 Substitute: **:s/asd/qwe** (substitute all _asd_ for _qwe_ in the line, use **:s/asd/qwe/g** for only the first occurence) \
 Delete the occurence: **:s/asd** \
 Substitute on all lines: **:%s/asd/qwe** (**%** is the motion)
 Substitute within range: (select stuff first) **:'<,'>s/asd/qwe** (the **'<,'>** will be added automatically) \
 Repeat the last substitute with its flags: **:&&** \
-Repeat the last substitute: **&**
+Repeat the last substitute: **&** \
+Use **g** flag to replace only the first occurence (vsvim settings): **:s/asd/qwe/g** \
+Use **c** flag to ask for confirmation on each replacement: **:s/asd/qwe/c**
 
 ---
 
