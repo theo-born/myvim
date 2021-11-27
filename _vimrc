@@ -50,6 +50,8 @@ nnoremap <Leader>; $a;<Esc>
 " <Leader> with , puts , on the end of the current line (without going to the insert mode)
 nnoremap <Leader>, $a,<Esc>
 
+" <Leader> with . puts . on the end of the current line (without going to the insert mode)
+nnoremap <Leader>. $a.<Esc>
 
 " <Leader> with c copies current selection (or line of nothing is selected currently) to both yank registry and to system clipboard
 " might delete later

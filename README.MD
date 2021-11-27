@@ -93,18 +93,20 @@ Change (selected), it copies changed to the register: **c** \
 Change until the end of the line: **C** \
 Change whole line: **cc** or **S** (tbh I should reuse S for something better)
 
-Cut (you can cut one symbol under the cursor): **x** \
-Cut before cursor: **X**
+Cut (you can cut one character under the cursor): **x** \
+Cut before cursor: **X** \
+Cut one character and go to Insert mode (\_vimrc): **Leader+x**
 
 Put an empty line below or above your current line (without going to the insert mode) (\_vimrc): **Leader+o** or **Leader+O** \
 Put an empty line after the cursor (without going to the insert mode) (\_vimrc): **Leader+Leader+o** \
 Put a space before/after your current cursor (without going to the insert mode) (\_vimrc): **Leader+A** or **Leader+a**
 
 Put ; on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+;** \
-Put , on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+,**
+Put , on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+,** \
+Put . on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+.**
 
 **_Search_** \
-Single symbol snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press **;** \
+Single character snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press **;** \
 (I prefer easymotion to snake tbh)
 
 Search to (non-inclusive compared to f): **t** (or **T**)
@@ -118,7 +120,7 @@ Jump to previous search term occurence: **N**
 Combine search with delete, yank, paste, like **d/asd** which deletes till _asd_ occurence
 
 **_Easymotion_** \
-Jump to pressed symbol (\_vimrc): **s** (**sz** shows all occurences of z or Z and you press key where you want to go) \
+Jump to pressed character (\_vimrc): **s** (**sz** shows all occurences of z or Z and you press key where you want to go) \
 **easymotion** for most used shortcuts (I often press spacebar too fast for mac to register it properly): \
 Ez motion by word (\_vimrc): **Leader+w** \
 Ez motion by word (backwards) (\_vimrc): **Leader+b** \
@@ -133,7 +135,7 @@ Change case: **~**
 
 Go to end of line: **$** \
 Go to beginning of a line: **0** \
-Go to the first non-blank symbol of a line: **^** \
+Go to the first non-blank character of a line: **^** \
 Swap between parenteses(they should be highlighted): **%**
 
 Jump to definition: **gd** \
@@ -241,7 +243,7 @@ _List of **Visual selection** motions or whatever tf they're called:_
 
 **aw** a word (with white space) \
 **iw** inner word \
-**aW** a WORD (with white space), all symbols to space/line break \
+**aW** a WORD (with white space), all characters to space/line break \
 **iW** inner WORD \
 **as** a sentence (with white space) \
 **is** inner sentence \
