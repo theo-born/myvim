@@ -65,7 +65,7 @@ Previous cursor position: **''** \
 Go back to the last action cursor position: **CTRL+O** \
 Go back to the previous action cursor position: **CTRL+I**
 
-Insert infront of cursor: **i** \
+Insert in front of the cursor: **i** \
 Insert beginning of the line: **I** \
 To go back to the last insert: **gi** \
 Insert mode: Delete current line (\_vimrc): **CTRL+d**
@@ -87,7 +87,8 @@ Copy current selection (or line of nothing is selected currently) to both yank r
 
 Delete something: **d** \
 Delete whole line: **dd** \
-Delete only line after cursor: **D**
+Delete only line after cursor: **D** \
+Insert Mode: Delete whole line: **dd**
 
 Change (selected), it copies changed to the register: **c** \
 Change until the end of the line: **C** \
@@ -98,7 +99,7 @@ Cut before cursor: **X** \
 Cut one character and go to Insert mode (\_vimrc): **Leader+x**
 
 Put an empty line below or above your current line (without going to the insert mode) (\_vimrc): **Leader+o** or **Leader+O** \
-Put an empty line after the cursor (without going to the insert mode) (\_vimrc): **Leader+Leader+o** \
+Put an empty line after the cursor (without going to the insert mode) (\_vimrc): **,** \
 Put a space before/after your current cursor (without going to the insert mode) (\_vimrc): **Leader+A** or **Leader+a**
 
 Put ; on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+;** \
@@ -106,7 +107,7 @@ Put , on the end of the current line (without going to the insert mode) (\_vimrc
 Put . on the end of the current line (without going to the insert mode) (\_vimrc): **Leader+.**
 
 **_Search_** \
-Single character snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurence of the charecter you press **;** \
+Single character snake replaces: **f** (**F** to search backwards) this shortcut jumps to the next occurrence of the charecter you press **;** \
 (I prefer easymotion to snake tbh)
 
 Search to (non-inclusive compared to f): **t** (or **T**)
@@ -114,13 +115,13 @@ Search to (non-inclusive compared to f): **t** (or **T**)
 Search for selected term (go to the next one immediately as well): **\*** \
 Search for selected term (WITHOUT going to the next one immediately): **Leader+\*** \
 Search for selected term backwards (go to the next one immediately as well): **?\*** \
-Jump to next search term occurence: **n** \
-Jump to previous search term occurence: **N**
+Jump to next search term occurrence: **n** \
+Jump to previous search term occurrence: **N**
 
-Combine search with delete, yank, paste, like **d/asd** which deletes till _asd_ occurence
+Combine search with delete, yank, paste, like **d/asd** which deletes till _asd_ occurrence
 
 **_Easymotion_** \
-Jump to pressed character (\_vimrc): **s** (**sz** shows all occurences of z or Z and you press key where you want to go) \
+Jump to pressed character (\_vimrc): **s** (**sz** shows all occurrences of z or Z and you press key where you want to go) \
 **easymotion** for most used shortcuts (I often press spacebar too fast for mac to register it properly): \
 Ez motion by word (\_vimrc): **Leader+w** \
 Ez motion by word (backwards) (\_vimrc): **Leader+b** \
@@ -136,12 +137,12 @@ Change case: **~**
 Go to end of line: **$** \
 Go to beginning of a line: **0** \
 Go to the first non-blank character of a line: **^** \
-Swap between parenteses(they should be highlighted): **%**
+Swap between parentheses(they should be highlighted): **%**
 
 Jump to definition: **gd** \
 Open file on which filename the cursor is: **gf**
 
-Commenting: **gc** something, **gcap** - commmenting out a paragraph
+Commenting: **gc** something, **gcap** - commenting out a paragraph
 
 Reopen the last insertion done: **gi**
 
@@ -200,13 +201,13 @@ Repeat the : command used above: **@@**
 
 ### Substitute in line (which is a command)
 
-Substitute: **:s/asd/qwe** (substitute all _asd_ for _qwe_ in the line, use **:s/asd/qwe/g** for only the first occurence) \
-Delete the occurence: **:s/asd** \
+Substitute: **:s/asd/qwe** (substitute all _asd_ for _qwe_ in the line, use **:s/asd/qwe/g** for only the first occurrence) \
+Delete the occurrence: **:s/asd** \
 Substitute on all lines: **:%s/asd/qwe** (**%** is the motion)
 Substitute within range: (select stuff first) **:'<,'>s/asd/qwe** (the **'<,'>** will be added automatically) \
 Repeat the last substitute with its flags: **:&&** \
 Repeat the last substitute: **&** \
-Use **g** flag to replace only the first occurence (vsvim settings): **:s/asd/qwe/g** \
+Use **g** flag to replace only the first occurrence (vsvim settings): **:s/asd/qwe/g** \
 Use **c** flag to ask for confirmation on each replacement: **:s/asd/qwe/c**
 
 ---
@@ -271,10 +272,10 @@ Motion commands to create more cursors (and then move them): **Leader+v jjjjj $*
 
 Search: **/qweqweqwe** (searches for qweqweqwe) \
 Search backwards: **?asdasdasd** (searches for asdasdasd) \
-Next occurence: **n** \
-Previous occurence: **n** \
-To go to the next occurence and then delete it and do it for the next one as well and so on: **ndw n . n .** \
-Select the next occurence of your last search (thru **/** or **?**): **gn** (or **gn**)
+Next occurrence: **n** \
+Previous occurrence: **n** \
+To go to the next occurrence and then delete it and do it for the next one as well and so on: **ndw n . n .** \
+Select the next occurrence of your last search (thru **/** or **?**): **gn** (or **gn**)
 
 Don't hesi to combine it with something else, its just a motion i ssupose
 

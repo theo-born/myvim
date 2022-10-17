@@ -19,12 +19,13 @@ nnoremap <Leader>j <Leader><Leader>j
 nnoremap <Leader>k <Leader><Leader>k
 
 
-" Select the current word for search (highlighted word), usual * goes right to the next item
+" Select the current word for search (highlighted word), by default * goes right to the next item
 nmap <Leader>* *N
 
 
 " Y works like D (but with yanking, instead of deleting), u can still use yy to yank the whole line 
 nnoremap Y y$
+
 
 " <Leader> with V selects the rest of the line
 nnoremap <Leader>V v$h
@@ -37,11 +38,12 @@ nnoremap <Leader>v <C-v>
 nmap <Leader>o $a<ENTER><Esc>
 nmap <Leader>O $I<ENTER><Esc>
 
-" <Leader> <Leader> with o puts an empty line after the cursor 
-nmap <Leader><Leader>o i<ENTER><Esc>
+" <Leader> with , puts an empty line after the cursor 
+nmap , a<ENTER><Esc>0
+
 
 " <Leader> with a puts a space before/after your current cursor 
-nmap <Leader>a a<SPACE><Esc> 
+nmap <Leader>a a<SPACE><Esc>
 nmap <Leader>A i<SPACE><Esc>
 
 " <Leader> with ; puts ; on the end of the current line (without going to the insert mode)
@@ -55,12 +57,17 @@ nnoremap <Leader>. $a.<Esc>
 
 " <Leader> with c copies current selection (or line of nothing is selected currently) to both yank registry and to system clipboard
 " might delete later
-nnoremap <Leader>c "*y<ENTER>
+"nnoremap <Leader>c "*y<ENTER>
 
 " Insert mode: Delete current line
-" might deprecate this later
+" might delete later
 inoremap <C-d> <C-o>dd
 
+" <Leader> with x deletes one character and goes to Insert mode
+nnoremap <Leader>x a<Backspace>
+
+" Paste when selected puts the pasted thing back in the register, cute little hack
+"xnoremap p pgvy
 
 " tf is this even?
 "nmap <space>rn <Plug>(coc-rename) 
